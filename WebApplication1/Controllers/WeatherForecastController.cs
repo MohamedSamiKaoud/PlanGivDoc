@@ -64,13 +64,12 @@ namespace WebApplication1.Controllers
             Header.Add("ClosingBalanceGrantMoney", "Closing Balance Grant Money");
             Header.Add("ClosingUnrestrictedCapitalBalance", "Closing Unrestricted Capital Balance");
             Header.Add("TotalGlGifts", "Total GlGifts");
-
             Header.Add("TotalGrants", "Total Grants");
 
             Table table = s.AddTable(true);
             table.ResetCells(Header.Count, 2);
             table.TableFormat.WrapTextAround = true;
-            table.TableFormat.Positioning.VertPosition = 43;
+            table.TableFormat.Positioning.VertPosition = 0;
 
             int index = 0;
             foreach (KeyValuePair<string, string> kvp in Header)
@@ -85,7 +84,6 @@ namespace WebApplication1.Controllers
                 par.Format.HorizontalAlignment = HorizontalAlignment.Left;
                 index++;
             }
-
         }
 
 
