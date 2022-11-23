@@ -10,6 +10,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -21,7 +22,6 @@ namespace WebApplication1.Controllers
         [HttpPost("CreateDocument")]
         public IActionResult CreateDocument(FinancialReport report )
         {
-
             Document doc = new Document();
             CreateFinancialTable(doc, report);
             var randomName = Guid.NewGuid().ToString();
