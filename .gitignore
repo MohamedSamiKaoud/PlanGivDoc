@@ -15,6 +15,7 @@ Release/
 *.opensdf
 *.tlog
 *.log
+*.suo
 TestResult.xml
 *.VisualState.xml
 Version.cs
