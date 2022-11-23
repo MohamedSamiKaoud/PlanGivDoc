@@ -64,6 +64,7 @@ namespace WebApplication1.Controllers
             Header.Add("ClosingBalanceGrantMoney", "Closing Balance Grant Money");
             Header.Add("ClosingUnrestrictedCapitalBalance", "Closing Unrestricted Capital Balance");
             Header.Add("TotalGlGifts", "Total GlGifts");
+
             Header.Add("TotalGrants", "Total Grants");
 
             Table table = s.AddTable(true);
