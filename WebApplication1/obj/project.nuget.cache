@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S1ieUfkSaK72is1zRO8l0sXsnIcilvylu0H0XlZ1fD+eWRrGpkXkTdTiqtRHoDTokeNgs2Oor4IgCGIKOsDaLw==",
+  "dgSpecHash": "7p9rvgpZxAITSoFrY2hkc9XDfuM9ZKi6FWlX/PuFkalrPz7zsyaVLTZKt55ga6V7GtaZx47FqcrVIICOLIvZ0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mohamed.agour\\Desktop\\MR.Berj\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\mohamed.agour\\Desktop\\MR.Berj\\PlanGicDoc\\PlanGivDoc\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mohamed.agour\\.nuget\\packages\\freespire.doc\\10.8.0\\freespire.doc.10.8.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
