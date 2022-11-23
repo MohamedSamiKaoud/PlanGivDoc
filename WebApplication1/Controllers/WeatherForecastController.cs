@@ -23,17 +23,13 @@ namespace WebApplication1.Controllers
             return Ok(randomName);
         }
 
-        private void CreateBookMark(Document doc)
+        private void CreateBookMark(Paragraph paragraph ,Document doc , string bookMarkName , string bookMarkValue)
         {
-            Section section = doc.AddSection();
-            Paragraph paragraph = section.AddParagraph();
-            paragraph.AppendText("Hello Form My First Project");
-            paragraph.AppendBookmarkStart("FirstName");
-            paragraph.AppendBookmarkEnd("FirstName");
+            paragraph.AppendBookmarkStart(bookMarkName);
+            paragraph.AppendBookmarkEnd(bookMarkName);
             BookmarksNavigator bookmarkNavigator = new BookmarksNavigator(doc);
-            bookmarkNavigator.MoveToBookmark("FirstName");
-            bookmarkNavigator.InsertText("Mohamed Agour", true);
-            //doc.SaveToFile(@"C:\Users\mohamed.agour\Desktop\MR.Berj\Output.docx", FileFormat.Docx2013);
+            bookmarkNavigator.MoveToBookmark(bookMarkName);
+            bookmarkNavigator.InsertText(bookMarkValue, true);
 
         }
 
@@ -51,7 +47,6 @@ namespace WebApplication1.Controllers
             Header.Add("AssessmentForAdmin", "Assessment For Admin");
             Header.Add("NetInvestmentReturn", "Net Investment Return");
             Header.Add("GrantsFromFund", "Grants From Fund");
-
             Header.Add("TransfersToCharitableGiftFund", "Transfers To Charitable GiftFund");
             Header.Add("ClosingValue", "Closing Value");
             Header.Add("OpeningBalanceGrantMoney", "Opening Balance Grant Money");
@@ -76,8 +71,9 @@ namespace WebApplication1.Controllers
                 var objValue = report.GetType().GetProperty(kvp.Key).GetValue(report, null);
                 if (objValue is null)
                     objValue = string.Empty;
+                CreateBookMark(par2, doc, kvp.Key, objValue.ToString());
                 par.AppendText(kvp.Value);
-                par2.AppendText(objValue.ToString());
+                //par2.AppendText(objValue.ToString());
                 par.Format.HorizontalAlignment = HorizontalAlignment.Left;
                 index++;
             }
