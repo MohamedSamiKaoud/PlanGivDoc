@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WebApplication1.Models
 {
@@ -25,5 +26,7 @@ namespace WebApplication1.Models
         public Nullable<decimal> TotalGlGifts { get; set; }
         public Nullable<decimal> TotalGrants { get; set; }
         public string FundName { get; set; }
+
+        public virtual ICollection<DARContact> DARContact { get; set; }
     }
 }
